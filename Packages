@@ -1,0 +1,17 @@
+Package: zfs-dkms
+Version: 2.3.0-0
+Architecture: amd64
+Maintainer: root <root@pve>
+Installed-Size: 61160
+Filename: ./zfs-dkms_2.3.0-0_amd64.deb
+Size: 31965816
+MD5sum: 72106f39f910507f91e177adb4267e58
+SHA1: c08307a07d34762ccea96bd883a02e0848cbe603
+SHA256: 33981bcdb7dc3a581ea4279558b757821359352c228bf92b8b32173c70e822b5
+Section: alien
+Priority: extra
+Description: Kernel module(s) (dkms)
+ This package contains the dkms ZFS kernel modules.
+ .
+ (Converted from a rpm package by alien version 8.95.6.)
+

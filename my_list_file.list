@@ -1,0 +1,1 @@
+deb [signed-by=/etc/apt/trusted.gpg.d/my_ppa.gpg] https://MEIT-REPO.github.io/proxmox-zfs ./
