@@ -6,9 +6,7 @@ https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
 
 install dependencies:
 
-apt install build-essential autoconf libtool gawk alien fakeroot proxmox-headers-$(uname -r) pve-headers-$(uname -r) uuid-dev libblkid-dev zlib1g-dev libaio-
-
-dev libssl-dev libelf-dev python3 python3-dev python3-setuptools python3-cffi libffi-dev dkms
+apt install build-essential autoconf libtool gawk alien fakeroot proxmox-headers-$(uname -r) pve-headers-$(uname -r) uuid-dev libblkid-dev zlib1g-dev libaio-dev libssl-dev libelf-dev python3 python3-dev python3-setuptools python3-cffi libffi-dev dkms
 
 add repo:
 
@@ -46,3 +44,4 @@ Output should be
 
 2778772614 9588325 ./usr/lib/modules/6.8.4-2-pve/updates/dkms/zfs.ko
 
+3243648977 9481837 ./usr/lib/modules/6.8.12-3-pve/updates/dkms/zfs.ko
