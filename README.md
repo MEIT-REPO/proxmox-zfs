@@ -22,6 +22,8 @@ apt install zfs-dkms
 
 update-initramfs -u
 
+proxmox-boot-tool refresh
+
 If you want to double confirm zfs.ko were installed correctly in initrd.img
 
 mkdir ~/verify_initrd
