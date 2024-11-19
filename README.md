@@ -1,49 +1,70 @@
-﻿# proxmox-zfs 2.3 RC 2/3 ...
+﻿# proxmox-zfs 2.3.0 RC 3 ...
 
-ref:
+###### ref:
 
 https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
 
-install dependencies:
-
+###### install dependencies:
+```commandline
 apt install build-essential autoconf libtool gawk alien fakeroot proxmox-headers-$(uname -r) pve-headers-$(uname -r) uuid-dev libblkid-dev zlib1g-dev libaio-dev libssl-dev libelf-dev python3 python3-dev python3-setuptools python3-cffi libffi-dev dkms
+```
 
-add repo:
+###### add repo:
 
+```commandline
 curl -s --compressed "https://meit-repo.github.io/proxmox-zfs/KEY.gpg" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/my_ppa.gpg >/dev/null
-
 curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://meit-repo.github.io/proxmox-zfs/my_list_file.list"
-
 apt update
+```
 
-add zfs-2.3:
+###### clear environment:
+If zfs existed, removed them
+```
+apt remove      libuutil3linux libnvpair3linux
+apt remove      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs
+```
 
-apt install zfs-dkms
-
+###### installation:
+```commandline
+apt install      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs 
 update-initramfs -u
+```
 
-proxmox-boot-tool refresh
+###### do verification before reboot
+```commandline
+/usr/sbin/zfs --version|head -n 1
+--- zfs-2.3.0-rc3                                          
+```
 
-If you want to double confirm zfs.ko were installed correctly in initrd.img
-
+unzip initrd image and check in chroot
+```commandline
+rm -rf ~/verify_initrd
 mkdir ~/verify_initrd
+cd ~/verify_initrd/  
+zstd -d -c /boot/initrd.img-$(uname -r) | cpio -id
 
-cd ~/verify_initrd/
+chroot . /usr/bin/sh
+zfs --version 2>null
+--- zfs-2.3.0-rc2
+modinfo /usr/lib/modules/6.8.4-2-pve/updates/dkms/zfs.ko | grep ^version
+--- 2.3.0-rc3
+```
 
-Use path of your initrd image to replace below /boot/initrd.img-6.8.4-2-pve
+###### reboot:
+reboot ...
 
-zstd -d -c /boot/initrd.img-6.8.4-2-pve | cpio -id
 
-Verify version, it should be 2.3.0-rc2
+###### verify after reboot
+```commandline
+/usr/sbin/zfs --version
+--- zfs-2.3.0-rc3                               
+--- zfs-kmod-2.3.0-rc3                          
+```
 
-find -name "zfs.ko" | xargs modinfo | head -n 2
 
-Verify cksum of zfs.ko
 
-find -name "zfs.ko" | xargs cksum # Verify output of zfs.ko
 
-Output should be
 
-2778772614 9588325 ./usr/lib/modules/6.8.4-2-pve/updates/dkms/zfs.ko
 
-3243648977 9481837 ./usr/lib/modules/6.8.12-3-pve/updates/dkms/zfs.ko
+
+
