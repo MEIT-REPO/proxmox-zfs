@@ -17,17 +17,9 @@ curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://meit-
 apt update
 ```
 
-###### clear environment:
-If zfs existed, removed them
-```
-apt remove      libuutil3linux libnvpair3linux
-apt remove      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs
-```
-
 ###### installation:
 ```commandline
 apt install      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs 
-update-initramfs -u
 ```
 
 ###### do verification before reboot
@@ -46,7 +38,7 @@ zstd -d -c /boot/initrd.img-$(uname -r) | cpio -id
 chroot . /usr/bin/sh
 zfs --version 2>null
 --- zfs-2.3.0-rc2
-modinfo /usr/lib/modules/6.8.4-2-pve/updates/dkms/zfs.ko | grep ^version
+modinfo /usr/lib/modules/$(uname -r)/updates/dkms/zfs.ko | grep ^version
 --- 2.3.0-rc3
 ```
 
