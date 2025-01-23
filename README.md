@@ -19,7 +19,8 @@ apt update
 
 ###### installation:
 ```commandline
-apt install      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs 
+apt install      zfs libzfs6 libnvpair3 libuutil3 libzfs6-devel libzpool6 pam-zfs-key zfs-dracut zfs-dkms zfs-initramfs
+update-initramfs -u
 ```
 
 ###### do verification before reboot
