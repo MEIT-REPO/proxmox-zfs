@@ -1,35 +1,70 @@
-Package: libnvpair3
-Version: 2.3.0-0
+Package: kmod-zfs-6.8.4-2-pve
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 134
-Depends: libc6 (>= 2.30), libtirpc3 (>= 1.0.2)
-Filename: ./libnvpair3_2.3.0-0_amd64.deb
-Size: 31388
-MD5sum: b4b9cb125b4a7dea8e9ac1e6a84ec035
-SHA1: 52b44a236306937a4588abcbab9a372ef74a2edb
-SHA256: 0fae4184d3dbbab98ddb17d248f1370e9cf68c13c73362b4dfe5bbbe74d77d77
+Installed-Size: 9685
+Filename: ./kmod-zfs-6.8.4-2-pve_2.3.0-1_amd64.deb
+Size: 1640800
+MD5sum: 9f63ec9f4c6cf4c38a6bf1e7b5ae6157
+SHA1: e6000b67da262743cc65cdd26271110f514707c6
+SHA256: be1339b0c4eed7c6ad52b54f855c6836e4a9d5dcc0f6aab4369f0432c8831c65
 Section: alien
 Priority: extra
-Description: Solaris name-value library for Linux
- This package contains routines for packing and unpacking name-value
- pairs.  This functionality is used to portably transport data across
- process boundaries, between kernel and user space, and can be used
- to write self describing data structures on disk.
+Description: zfs kernel module(s) for 6.8.4-2-pve
+ This package provides the zfs kernel modules built for the Linux
+ kernel 6.8.4-2-pve for the x86_64 family of processors.
+ .
+ (Converted from a rpm package by alien version 8.95.6.)
+
+Package: kmod-zfs-devel
+Version: 2.3.0-1
+Architecture: amd64
+Maintainer: root <root@pve>
+Installed-Size: 3046
+Filename: ./kmod-zfs-devel_2.3.0-1_amd64.deb
+Size: 322632
+MD5sum: ac59b8082a4c9a4a39f8d0bb84309e08
+SHA1: dc8a2c5e8f5cfe2af8858f8138eede96f8d6e0a6
+SHA256: 2a6c046720d17a7c65e060ef145933755a5c25a4b54cfab0949783940ed94bfa
+Section: alien
+Priority: extra
+Description: zfs kernel module(s) devel common
+ This package provides the common header files to build kernel modules
+ which depend on the zfs kernel module.  It may optionally require
+ the zfs-devel-<kernel> objects for the newest kernel.
+ .
+ (Converted from a rpm package by alien version 8.95.6.)
+
+Package: kmod-zfs-devel-6.8.4-2-pve
+Version: 2.3.0-1
+Architecture: amd64
+Maintainer: root <root@pve>
+Installed-Size: 185
+Filename: ./kmod-zfs-devel-6.8.4-2-pve_2.3.0-1_amd64.deb
+Size: 20720
+MD5sum: 2deadb76034313fa9aaea51fd1eaae9d
+SHA1: f49ef78d07d1479e1d3d8b84214729f8dcea0788
+SHA256: 95e0e2fff973410ac36f4ff192e58b13e820ae728d58baacfbe1571cb3e664a9
+Section: alien
+Priority: extra
+Description: zfs kernel module(s) devel for 6.8.4-2-pve
+ This package provides objects and symbols required to build kernel modules
+ which depend on the zfs kernel modules built for the Linux
+ kernel 6.8.4-2-pve for the x86_64 family of processors.
  .
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: libnvpair3
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
 Installed-Size: 134
 Depends: libc6 (>= 2.30), libtirpc3 (>= 1.0.2)
-Filename: ./rc3deb/libnvpair3_2.3.0-0_amd64.deb
-Size: 31388
-MD5sum: b4b9cb125b4a7dea8e9ac1e6a84ec035
-SHA1: 52b44a236306937a4588abcbab9a372ef74a2edb
-SHA256: 0fae4184d3dbbab98ddb17d248f1370e9cf68c13c73362b4dfe5bbbe74d77d77
+Filename: ./libnvpair3_2.3.0-1_amd64.deb
+Size: 31436
+MD5sum: 11dde4465403a367c25b9f4684f29c8e
+SHA1: f2a3bf6e4480c10aeab045a3478434b0ced537ed
+SHA256: ca54de06c1d62ff3e496a40879ede9b7a8b504c038f7a17b8474a79ac641797b
 Section: alien
 Priority: extra
 Description: Solaris name-value library for Linux
@@ -41,42 +76,16 @@ Description: Solaris name-value library for Linux
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: libuutil3
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
 Installed-Size: 93
 Depends: libc6 (>= 2.34)
-Filename: ./libuutil3_2.3.0-0_amd64.deb
-Size: 22808
-MD5sum: f4f442f17c5bed6f8bb1b23e4e9dbd00
-SHA1: abe35d972f0417d397a4c58eb256af8f8039f323
-SHA256: 2dd9d411fe83db015172d4218f1b5be70b4139940494462041c8374b52f47a1f
-Section: alien
-Priority: extra
-Description: Solaris userland utility library for Linux
- This library provides a variety of compatibility functions for OpenZFS:
-  * libspl: The Solaris Porting Layer userland library, which provides APIs
-    that make it possible to run Solaris user code in a Linux environment
-    with relatively minimal modification.
-  * libavl: The Adelson-Velskii Landis balanced binary tree manipulation
-    library.
-  * libefi: The Extensible Firmware Interface library for GUID disk
-    partitioning.
-  * libshare: NFS, SMB, and iSCSI service integration for ZFS.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: libuutil3
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 93
-Depends: libc6 (>= 2.34)
-Filename: ./rc3deb/libuutil3_2.3.0-0_amd64.deb
-Size: 22808
-MD5sum: f4f442f17c5bed6f8bb1b23e4e9dbd00
-SHA1: abe35d972f0417d397a4c58eb256af8f8039f323
-SHA256: 2dd9d411fe83db015172d4218f1b5be70b4139940494462041c8374b52f47a1f
+Filename: ./libuutil3_2.3.0-1_amd64.deb
+Size: 22816
+MD5sum: c9654341d3940a9263975f746ab853e5
+SHA1: dd92004ae844dca3eb7f1bcc81f029227842dab2
+SHA256: 0aca3bde8a7c9af4c40eca16e05747f9f9315b5ac2c8c46ec24d9f00f707a23f
 Section: alien
 Priority: extra
 Description: Solaris userland utility library for Linux
@@ -93,32 +102,16 @@ Description: Solaris userland utility library for Linux
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: libzfs6
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 656
-Filename: ./libzfs6_2.3.0-0_amd64.deb
-Size: 211560
-MD5sum: 1f63a3bc60cb35c890294763d0e75e51
-SHA1: b8763ff5e65a622bee65246952f9a640ded53fbb
-SHA256: 6edbfe99bbd3a2dcede7c3cc50e3d4d8155aa31feeca54c97a3e8b451fecbfe1
-Section: alien
-Priority: extra
-Description: Native ZFS filesystem library for Linux
- This package provides support for managing ZFS filesystems
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: libzfs6
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 656
-Filename: ./rc3deb/libzfs6_2.3.0-0_amd64.deb
-Size: 211560
-MD5sum: 1f63a3bc60cb35c890294763d0e75e51
-SHA1: b8763ff5e65a622bee65246952f9a640ded53fbb
-SHA256: 6edbfe99bbd3a2dcede7c3cc50e3d4d8155aa31feeca54c97a3e8b451fecbfe1
+Installed-Size: 660
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.34), libnvpair3, libssl3 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3, zlib1g (>= 1:1.1.4)
+Filename: ./libzfs6_2.3.0-1_amd64.deb
+Size: 213228
+MD5sum: 824e56f8da4c459105980201787713a5
+SHA1: 37d73341373299ba47a7a7fb6f49e80700dbac48
+SHA256: c58eb70d9b61f969bf18b8f423909c41798df5fca4513fc18b29efb02d87e8be
 Section: alien
 Priority: extra
 Description: Native ZFS filesystem library for Linux
@@ -127,33 +120,15 @@ Description: Native ZFS filesystem library for Linux
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: libzfs6-devel
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 2941
-Filename: ./libzfs6-devel_2.3.0-0_amd64.deb
-Size: 326884
-MD5sum: 1b6a0a8b07d810b1bb55f28ea17bc022
-SHA1: 07a5dcd6846014cd8f45ce16ebfe43e89ddc2991
-SHA256: d711b4e3216e3ec56f4ddf871f37b15e595a9a42824e7942a1d2cea9712f8c1d
-Section: alien
-Priority: extra
-Description: Development headers
- This package contains the header files needed for building additional
- applications against the ZFS libraries.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: libzfs6-devel
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 2941
-Filename: ./rc3deb/libzfs6-devel_2.3.0-0_amd64.deb
-Size: 326884
-MD5sum: 1b6a0a8b07d810b1bb55f28ea17bc022
-SHA1: 07a5dcd6846014cd8f45ce16ebfe43e89ddc2991
-SHA256: d711b4e3216e3ec56f4ddf871f37b15e595a9a42824e7942a1d2cea9712f8c1d
+Installed-Size: 2942
+Filename: ./libzfs6-devel_2.3.0-1_amd64.deb
+Size: 326872
+MD5sum: 7664efd28d9b8b48a3f1d93898f2883e
+SHA1: 4e83d83bdc22c20f12a1a55f99a1808a5017a41f
+SHA256: 316ae6c44fe949083009cadfd557efbd977957d3f286849bc6a3934a0bf789cf
 Section: alien
 Priority: extra
 Description: Development headers
@@ -163,33 +138,16 @@ Description: Development headers
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: libzpool6
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 4552
-Filename: ./libzpool6_2.3.0-0_amd64.deb
-Size: 1381816
-MD5sum: c472c013a347bdbf545ae8ffd261aa91
-SHA1: ff265b67396d27ec20c7f7c7dadeee24d091d1d0
-SHA256: 70c0a2d2c6d1daacbc2adbc1d377986fb22b09714599459a0a4cff123465a5c0
-Section: alien
-Priority: extra
-Description: Native ZFS pool library for Linux
- This package contains the zpool library, which provides support
- for managing zpools
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: libzpool6
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 4552
-Filename: ./rc3deb/libzpool6_2.3.0-0_amd64.deb
-Size: 1381816
-MD5sum: c472c013a347bdbf545ae8ffd261aa91
-SHA1: ff265b67396d27ec20c7f7c7dadeee24d091d1d0
-SHA256: 70c0a2d2c6d1daacbc2adbc1d377986fb22b09714599459a0a4cff123465a5c0
+Installed-Size: 4555
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.34), libnvpair3, libudev1 (>= 183), libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Filename: ./libzpool6_2.3.0-1_amd64.deb
+Size: 1385396
+MD5sum: 446198ba869e0323b38f6c78ad29d915
+SHA1: 8fa8cb5681d74bb2bfb254b5db479545417d5e26
+SHA256: a879e43a35723564ba43887e05103cc2e0b9d60ca875ebb48abd5a498c35ee0a
 Section: alien
 Priority: extra
 Description: Native ZFS pool library for Linux
@@ -199,33 +157,16 @@ Description: Native ZFS pool library for Linux
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: pam-zfs-key
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
 Installed-Size: 44
-Filename: ./pam-zfs-key_2.3.0-0_amd64.deb
-Size: 9628
-MD5sum: ea6485dcf65c33f7ccfe0f0b5cf38baf
-SHA1: 6fedb0593f85fa33b5f99ace90aa12a3b4c07694
-SHA256: f192205cbcda12da97c1828583742a3035c795d9b999e3f9e01725d4879b68fc
-Section: alien
-Priority: extra
-Description: PAM module for encrypted ZFS datasets
- This package contains the pam_zfs_key PAM module, which provides
- support for unlocking datasets on user login.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: pam-zfs-key
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 44
-Filename: ./rc3deb/pam-zfs-key_2.3.0-0_amd64.deb
-Size: 9628
-MD5sum: ea6485dcf65c33f7ccfe0f0b5cf38baf
-SHA1: 6fedb0593f85fa33b5f99ace90aa12a3b4c07694
-SHA256: f192205cbcda12da97c1828583742a3035c795d9b999e3f9e01725d4879b68fc
+Depends: libc6 (>= 2.14), libnvpair3, libpam0g (>= 1.1.0), libssl3 (>= 3.0.0), libzfs6
+Filename: ./pam-zfs-key_2.3.0-1_amd64.deb
+Size: 9680
+MD5sum: c8b67d4fb90cad5687f6ddfda1fc80a4
+SHA1: 9cd5cdad2bf9d24508559f1804b83304510723b6
+SHA256: dbc28f91fd0ef30c04759b98912c6848408f425afe8870ffbd8c1c8f8841ebe7
 Section: alien
 Priority: extra
 Description: PAM module for encrypted ZFS datasets
@@ -235,32 +176,16 @@ Description: PAM module for encrypted ZFS datasets
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: zfs
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 2339
-Filename: ./zfs_2.3.0-0_amd64.deb
-Size: 706232
-MD5sum: 3a56a8e7954327af00e3c41a0a705335
-SHA1: 3f0ba7f6a8cb76e36f187bbeb2a94fe1d6a07afc
-SHA256: 435559e336b01fb862208609816925c2efe89219941c77085d9a44d9e46aaeb0
-Section: alien
-Priority: extra
-Description: Commands to control the kernel modules and libraries
- This package contains the core ZFS command line utilities.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: zfs
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 2339
-Filename: ./rc3deb/zfs_2.3.0-0_amd64.deb
-Size: 706232
-MD5sum: 3a56a8e7954327af00e3c41a0a705335
-SHA1: 3f0ba7f6a8cb76e36f187bbeb2a94fe1d6a07afc
-SHA256: 435559e336b01fb862208609816925c2efe89219941c77085d9a44d9e46aaeb0
+Installed-Size: 2340
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.34), libnvpair3, libssl3 (>= 3.0.0), libudev1 (>= 183), libuuid1 (>= 2.16), libuutil3, libzfs6, libzpool6
+Filename: ./zfs_2.3.0-1_amd64.deb
+Size: 707792
+MD5sum: 9e3e7c52d7d8be46533bb788c68e1004
+SHA1: 5b1e04cea4d0fb1e2cb9d2dab5229d9ddfe58f00
+SHA256: a6ed069c97a8c8d0d0cc10bd0bee1c1715254fcd956f33c83736476b91344092
 Section: alien
 Priority: extra
 Description: Commands to control the kernel modules and libraries
@@ -269,32 +194,15 @@ Description: Commands to control the kernel modules and libraries
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: zfs-dkms
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 61165
-Filename: ./zfs-dkms_2.3.0-0_amd64.deb
-Size: 31968692
-MD5sum: 0de2d0b86dcd4ca40936eb7014aa3883
-SHA1: 6051ebc0ce4ea571eb40f1f601f297ba6b147c17
-SHA256: a90789742cc39e50ee95565bc4f95a6c86f522958a5497899740a9f3e952b193
-Section: alien
-Priority: extra
-Description: Kernel module(s) (dkms)
- This package contains the dkms ZFS kernel modules.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: zfs-dkms
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 61165
-Filename: ./rc3deb/zfs-dkms_2.3.0-0_amd64.deb
-Size: 31968692
-MD5sum: 0de2d0b86dcd4ca40936eb7014aa3883
-SHA1: 6051ebc0ce4ea571eb40f1f601f297ba6b147c17
-SHA256: a90789742cc39e50ee95565bc4f95a6c86f522958a5497899740a9f3e952b193
+Installed-Size: 61324
+Filename: ./zfs-dkms_2.3.0-1_amd64.deb
+Size: 31997616
+MD5sum: c0c765d1fa94e9a5b9928abf8551465a
+SHA1: d1b587b09f6cb238df8abd2b18f99dfdd4291215
+SHA256: ec34e5d43a1ecb0111952f88131a50d2c1541b2ff46a6bc9c5dad6077141e0da
 Section: alien
 Priority: extra
 Description: Kernel module(s) (dkms)
@@ -303,33 +211,15 @@ Description: Kernel module(s) (dkms)
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: zfs-dracut
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
 Installed-Size: 48
-Filename: ./zfs-dracut_2.3.0-0_amd64.deb
+Filename: ./zfs-dracut_2.3.0-1_amd64.deb
 Size: 10040
-MD5sum: 826050cfdc2b3b9df3eab630f0ef1c7e
-SHA1: 3ba15ffc5c9584f6c740c49609733e0761254882
-SHA256: 13956585877df75c4d8dd795a9cf6d5ae478296099875e4350262b51a9fc8269
-Section: alien
-Priority: extra
-Description: Dracut module
- This package contains a dracut module used to construct an initramfs
- image which is ZFS aware.
- .
- (Converted from a rpm package by alien version 8.95.6.)
-
-Package: zfs-dracut
-Version: 2.3.0-0
-Architecture: amd64
-Maintainer: root <root@pve>
-Installed-Size: 48
-Filename: ./rc3deb/zfs-dracut_2.3.0-0_amd64.deb
-Size: 10040
-MD5sum: 826050cfdc2b3b9df3eab630f0ef1c7e
-SHA1: 3ba15ffc5c9584f6c740c49609733e0761254882
-SHA256: 13956585877df75c4d8dd795a9cf6d5ae478296099875e4350262b51a9fc8269
+MD5sum: 16c2681039a56be5dec6ad07eb811a6b
+SHA1: d2906a1e511a19d5e513407d5f6a800045269286
+SHA256: 0636c3d683da2cafc2ab562bae7b1fb352e947f4bb2702447d3139c3ffafc938
 Section: alien
 Priority: extra
 Description: Dracut module
@@ -339,15 +229,15 @@ Description: Dracut module
  (Converted from a rpm package by alien version 8.95.6.)
 
 Package: zfs-initramfs
-Version: 2.3.0-0
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
 Installed-Size: 53
-Filename: ./zfs-initramfs_2.3.0-0_amd64.deb
-Size: 13660
-MD5sum: 900ef7314480e92899499e2c13bbfd94
-SHA1: 06ed1d1ac5ecd06a151b4f75b6dd8721b65c4ff6
-SHA256: 32cab1cf6ad23602130f39c2a48c00d1fe96e259fcaeec67f26b97ff3d578475
+Filename: ./zfs-initramfs_2.3.0-1_amd64.deb
+Size: 13664
+MD5sum: 85b40eb243657d697aaf8c46a6b6a823
+SHA1: 353381082ea64019114b8108a5d8ffdfe196418e
+SHA256: da902ca026781deb91c26ee8ac5c700a38e30e9e636001d27f3c0966702b881a
 Section: alien
 Priority: extra
 Description: Initramfs module
@@ -356,21 +246,22 @@ Description: Initramfs module
  .
  (Converted from a rpm package by alien version 8.95.6.)
 
-Package: zfs-initramfs
-Version: 2.3.0-0
+Package: zfs-test
+Version: 2.3.0-1
 Architecture: amd64
 Maintainer: root <root@pve>
-Installed-Size: 53
-Filename: ./rc3deb/zfs-initramfs_2.3.0-0_amd64.deb
-Size: 13660
-MD5sum: 900ef7314480e92899499e2c13bbfd94
-SHA1: 06ed1d1ac5ecd06a151b4f75b6dd8721b65c4ff6
-SHA256: 32cab1cf6ad23602130f39c2a48c00d1fe96e259fcaeec67f26b97ff3d578475
+Installed-Size: 35008
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.34), libnvpair3, libudev1 (>= 183), libzfs6, libzpool6, zlib1g (>= 1:1.2.3.3)
+Filename: ./zfs-test_2.3.0-1_amd64.deb
+Size: 28468768
+MD5sum: eecf6e4891679abe82fc4c7e94f87ecc
+SHA1: 34e9bf63d91749fd79c65b3379acf8b6cb1858bd
+SHA256: 5d037492abebc1cd472f0457ffc846bc2dcb99063c8b117dd9c7c8842d340c8c
 Section: alien
 Priority: extra
-Description: Initramfs module
- This package contains a initramfs module used to construct an initramfs
- image which is ZFS aware.
+Description: Test infrastructure
+ This package contains test infrastructure and support scripts for
+ validating the file system.
  .
  (Converted from a rpm package by alien version 8.95.6.)
 
