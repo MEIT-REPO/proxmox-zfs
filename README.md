@@ -52,8 +52,8 @@ reboot ...
 
 ```commandline
 zfs get direct rpool/data
-NAME        PROPERTY  VALUE     SOURCE
-rpool/data  direct    standard  default
+--- NAME        PROPERTY  VALUE     SOURCE
+--- rpool/data  direct    standard  default
 ```
 
 ###### ref:
