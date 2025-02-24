@@ -50,6 +50,15 @@ reboot ...
 --- zfs-kmod-2.3.0-1
 ```
 
+```commandline
+zfs get direct rpool/data
+NAME        PROPERTY  VALUE     SOURCE
+rpool/data  direct    standard  default
+```
+
 ###### ref:
 https://github.com/openzfs/zfs/releases
+
+https://github.com/openzfs/zfs/pull/10018
+
 https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
