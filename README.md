@@ -1,8 +1,4 @@
-﻿# proxmox-zfs 2.3.0 RC 3 ...
-
-###### ref:
-
-https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
+﻿# proxmox-zfs 2.3.0-1
 
 ###### install dependencies:
 ```commandline
@@ -26,7 +22,7 @@ update-initramfs -u
 ###### do verification before reboot
 ```commandline
 /usr/sbin/zfs --version|head -n 1
---- zfs-2.3.0-rc3                                          
+--- zfs-2.3.0-1
 ```
 
 unzip initrd image and check in chroot
@@ -38,9 +34,9 @@ zstd -d -c /boot/initrd.img-$(uname -r) | cpio -id
 
 chroot . /usr/bin/sh
 zfs --version 2>null
---- zfs-2.3.0-rc2
+--- zfs-2.3.0-1
 modinfo /usr/lib/modules/$(uname -r)/updates/dkms/zfs.ko | grep ^version
---- 2.3.0-rc3
+--- 2.3.0-1
 ```
 
 ###### reboot:
@@ -50,14 +46,9 @@ reboot ...
 ###### verify after reboot
 ```commandline
 /usr/sbin/zfs --version
---- zfs-2.3.0-rc3                               
---- zfs-kmod-2.3.0-rc3                          
+--- zfs-2.3.0-1
+--- zfs-kmod-2.3.0-1
 ```
 
-
-
-
-
-
-
-
+###### ref:
+https://assafmo.github.io/2019/05/02/ppa-repo-hosted-on-github.html
