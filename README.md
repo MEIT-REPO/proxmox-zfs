@@ -5,6 +5,7 @@ This is developed for and intended to use with Proxmox installations. As a prere
 ```commandline
 apt update
 apt upgrade
+reboot
 ```
 
 ###### install dependencies:
