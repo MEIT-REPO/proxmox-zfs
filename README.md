@@ -1,5 +1,12 @@
 ﻿# proxmox-zfs 2.3.0-1
 
+This is developed for and intended to use with Proxmox installations. As a prerequisite, make sure the system is running error free and has no pending updates most importantly no kernel updates outstanding.
+
+```commandline
+apt update
+apt upgrade
+```
+
 ###### install dependencies:
 ```commandline
 apt install build-essential autoconf libtool gawk alien fakeroot proxmox-headers-$(uname -r) pve-headers-$(uname -r) uuid-dev libblkid-dev zlib1g-dev libaio-dev libssl-dev libelf-dev python3 python3-dev python3-setuptools python3-cffi libffi-dev dkms
