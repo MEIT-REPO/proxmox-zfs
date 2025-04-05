@@ -1,4 +1,4 @@
-﻿# proxmox-zfs 2.3.0-1
+﻿# proxmox-zfs 2.3.1-1
 
 This is developed for and intended to use with Proxmox installations. As a prerequisite, make sure the system is running error free and has no pending updates most importantly no kernel updates outstanding.
 
@@ -30,7 +30,7 @@ update-initramfs -u
 ###### do verification before reboot
 ```commandline
 /usr/sbin/zfs --version|head -n 1
---- zfs-2.3.0-1
+--- zfs-2.3.1-1
 ```
 
 unzip initrd image and check in chroot
@@ -42,9 +42,9 @@ zstd -d -c /boot/initrd.img-$(uname -r) | cpio -id
 
 chroot . /usr/bin/sh
 zfs --version 2>null
---- zfs-2.3.0-1
+--- zfs-2.3.1-1
 modinfo /usr/lib/modules/$(uname -r)/updates/dkms/zfs.ko | grep ^version
---- 2.3.0-1
+--- 2.3.1-1
 ```
 
 ###### reboot:
@@ -54,8 +54,8 @@ reboot ...
 ###### verify after reboot
 ```commandline
 /usr/sbin/zfs --version
---- zfs-2.3.0-1
---- zfs-kmod-2.3.0-1
+--- zfs-2.3.1-1
+--- zfs-kmod-2.3.1-1
 ```
 
 ```commandline
